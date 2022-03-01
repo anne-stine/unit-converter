@@ -1,49 +1,39 @@
 //#region --- Metric/Imperial Unit Conversion
 
 // Grab all elements
-
-let valueEl = document.getElementsById("value-el").innerText
-
-console.log(valueEl)
-
-let getValue = document.getElementsByName("value")
-let feetEl = document.getElementById("feet-el")
-let gallonsEl = document.getElementById("gallons-el")
-let poundsEl = document.getElementById("pounds-el")
+let lengthEl = document.getElementById("length-el")
+let volumeEl = document.getElementById("volume-el")
+let massEl = document.getElementById("mass-el")
 
 
-// Define individual calculations
+// Conversions triggered oninput
 
-// 1 meter *3.281 = feet
-// 1 feet /3.281 = meters
+function convert(valNum) {
 
-// 1 liter *0,264 = gallons
-// 1 gallon /0,264 = liters
+    // Convert length
+    feet = valNum * 3.281
+    meters = valNum / 3.281
+    lengthEl.innerText = valNum + " meters" + " = " + feet.toFixed(3) + " feet" + " | " + valNum + " feet" + " = " + meters.toFixed(3) + " meters"
+    
+    // Convert volume
+    gallons = valNum * 0.264
+    liters = valNum / 0.264
+    volumeEl.innerText = valNum + " liters" + " = " + gallons.toFixed(3) + " gallons" + " | " + valNum + " gallons" + " = " + liters.toFixed(3) + " liters"
+    
+    // Convert mass
+    pounds = valNum * 2.205
+    kilos = valNum / 2.205
+    massEl.innerText = valNum + " kilos" + " = " + pounds.toFixed(3) + " pounds" + " | " + valNum + " pounds" + " = " + kilos.toFixed(3) + " kilos"
 
-// 1 kilo *2.205 = pounds
-// 1 pound /2.205 = kilos
+    // Let value be 0 if input is empty
+    if (valNum == "") {
+        valNum = 0
+    }
 
-
-function length() {
-    getValue.innerText = valueEl + "meters"
-    feetEl.innerText = valueEl * 3.281
+    // Change plural words into singular words if value is 1
+    if (valNum == 1) {
+        
+    }
 }
-
-function volume() {
-
-}
-
-function mass() {
-
-}
-
-// Trigger calculations
-
-function convert() {
-    length()
-    volume()
-    mass()
-}
-
 
 //#endregion

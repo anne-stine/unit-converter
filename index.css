@@ -1,10 +1,86 @@
-html, body {
+html,
+body,
+input {
     margin: 0;
     padding: 0;
+    background: #fff;
+
+    /* General fonts styling */
+    color: #1A1921;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 150%;
+    text-align: center;
 }
+
+/* Hero Container */
 
 .gradient-hero {
-    background: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 0 0 40px;
     height: 40vh;
+    background: linear-gradient(250deg, #070820 0%, #291921 100%);
 }
 
+/* White text */
+
+h2,
+input,
+::placeholder {
+    color: #fff;
+}
+
+/* Medium bold text */
+
+h2,
+h3,
+input,
+::placeholder {
+    font-weight: 600;
+}
+
+/* Heading 2 size */
+
+h2 {
+    font-size: 1.5rem;
+    line-height: 140%;
+}
+
+/* Paragraph color */
+
+p {
+    color: #4E4E4E;
+    padding-bottom: 16px;
+}
+
+/* Input and placeholder styling */
+
+input,
+::placeholder {
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 5rem;
+    text-align: center;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* Hide input number arrows */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

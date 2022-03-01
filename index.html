@@ -6,24 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unit Converter</title>
     <link rel="stylesheet" href="index.css">
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="gradient-hero">
-        <h1>Metric/Imperial Unit Conversion</h1>
-        <input type="number" name="value" id="value-el" onchange="convert()" placeholder="0">
-        <!-- Ekstra knapp i tilfelle onchange over ikke fungerer -->
-        <button onclick="convert()">convert</button>
+        <h2>Metric/Imperial Unit Conversion</h2>
+        <input type="number" name="value" oninput="convert(this.value)" placeholder="0">
     </div>
 
     <h3>Length (Meter/Feet)</h3>
-    <p><span name="value">0 meters</span> = <span id="feet-el">0.000 feet</span> | <span name="input">0 feet</span> = <span id="meters-el">0.000 meters</span></p>
+    <p id="length-el">0 meters = 0.000 feet | 0 feet = 0.000 meters</p>
 
     <h3>Volume (Liters/Gallons)</h3>
-    <p><span name="value">0 liters</span> = <span id="gallons-el">0.000 gallons</span> | <span name="input">0 gallons</span> = <span id="liter-el">0.000 liters</span></p>
+    <p id="volume-el">0 liters = 0.000 gallons | 0 gallons = 0.000 liters</p>
     
     <h3>Mass (Kilograms/Pounds)</h3>
-    <p><span name="value">0 kilos</span> = <span id="pounds-el">0.000 pounds</span> | <span name="input">0 pounds</span> = <span id="kilo-el">0.000 kilos</span></p>
+    <p id="mass-el">0 kilos = 0.000 pounds | 0 pounds = 0.000 kilos</p>
 
     <script src="index.js"></script>
 </body>

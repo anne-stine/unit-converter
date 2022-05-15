@@ -90,24 +90,3 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
-
-
-/* Light Mode */
-
-@media (prefers-color-scheme: light) {
-    
-    html, body {
-        background: #fff;
-        color: #000;
-    }
-}
-
-/* Light Mode */
-
-@media (prefers-color-scheme: dark) {
-    
-    html, body {
-        background: #000;
-        color: #fff;
-    }
-}

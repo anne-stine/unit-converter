@@ -1,113 +1,101 @@
-html,
-body,
-input {
+html, body
+{
     margin: 0;
     padding: 0;
-    background: #fff;
+    background: #F4F4F4;
+}
 
-    /* General fonts styling */
-    color: #1A1921;
+h3, h4, p, input, button
+{
     font-family: Inter, sans-serif;
     font-weight: 400;
     font-size: 1rem;
-    line-height: 150%;
+    line-height: 160%;
     text-align: center;
+    margin: .5rem 0;
+    color: #353535;
 }
 
-/* Hero Container */
-
-.gradient-hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    margin: 0 0 40px;
-    height: 300px;
-    background: linear-gradient(250deg, #070820 0%, #291921 100%);
+h3
+{
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 130%;
+    color: #FFFFFF;
 }
 
-/* White text */
-
-h2,
-input,
-::placeholder {
-    color: #fff;
+h4
+{
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 120%;
+    color: #5A537B;
 }
 
-/* Lower opacity for placeholder text */
+input[type=number]
+{
+    background: none;
+    color: #FFFFFF;
+    border: 2px solid #B295FF;
+    border-radius: .25rem;
+    font-size: 4rem;
+    font-weight: 600;
+    width: 100%;
+}
 
-::placeholder {
+::placeholder 
+{
+    color: #FFFFFF;
     opacity: 0.2;
 }
 
-/* Medium bold text */
-
-h2,
-h3,
-input,
-::placeholder {
-    font-weight: 600;
-}
-
-/* Heading 2 size */
-
-h2 {
-    font-size: 1.5rem;
-    line-height: 140%;
-}
-
-/* Paragraph color */
-
-p {
-    color: #4E4E4E;
-    padding-bottom: 16px;
-}
-
-/* Input and placeholder styling */
-
-input,
-::placeholder {
-    width: 100%;
-    padding: 20px 0;
-    background: none;
-    border: none;
-    font-size: 5rem;
-}
-
-input:focus {
-    outline: none;
+#convert-btn
+{
+    border: 0;
+    border-radius: .25rem;
+    padding: .75rem 1.5rem;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    font-weight: 500;
 }
 
 /* Hide input number arrows */
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+input::-webkit-inner-spin-button 
+{
   -webkit-appearance: none;
   margin: 0;
 }
+
 /* Firefox */
-input[type=number] {
+input[type=number] 
+{
   -moz-appearance: textfield;
 }
 
-
-/* Light Mode */
-
-@media (prefers-color-scheme: light) {
-    
-    html, body {
-        background: #fff;
-        color: #000;
-    }
+.hero 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 300px;
+    background: #6943FF;
 }
 
-/* Light Mode */
-
-@media (prefers-color-scheme: dark) {
-    
-    html, body {
-        background: #000;
-        color: #fff;
-    }
+.container
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
 }
+
+.card
+{
+    background: #FFFFFF;
+    border-radius: .25rem;
+    padding: 1rem;
+}
+

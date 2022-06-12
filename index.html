@@ -9,24 +9,29 @@
     <!-- Google Font: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="gradient-hero">
-        <h2>Metric/Imperial Unit Conversion</h2>
-        <input type="number" name="value" oninput="convert(this.value)" autofocus placeholder="0" pattern="[0-9]*" autocomplete="off">
+    <div class="hero">
+        <h3>Metric/Imperial Unit Conversion</h3>
+        <input id="input-el" type="number" name="value" autofocus placeholder="0" pattern="[0-9]*" autocomplete="off">
+        <button id="convert-btn">Convert</button>
     </div>
-
-    <h3>Length (Meter/Feet)</h3>
-    <p id="length-el">0 meters = 0.000 feet | 0 feet = 0.000 meters</p>
-
-    <h3>Volume (Liters/Gallons)</h3>
-    <p id="volume-el">0 liters = 0.000 gallons | 0 gallons = 0.000 liters</p>
-    
-    <h3>Mass (Kilograms/Pounds)</h3>
-    <p id="mass-el">0 kilos = 0.000 pounds | 0 pounds = 0.000 kilos</p>
-
+    <div class="container">
+        <div class="card">
+            <h4>Length (Meter/Feet)</h4>
+            <p id="length-el">0 meters = 0.000 feet | 0 feet = 0.000 meters</p>
+        </div>
+        <div class="card">
+            <h4>Volume (Liters/Gallons)</h4>
+            <p id="volume-el">0 liters = 0.000 gallons | 0 gallons = 0.000 liters</p>
+        </div>
+        <div class="card">
+            <h4>Mass (Kilograms/Pounds)</h4>
+            <p id="mass-el">0 kilos = 0.000 pounds | 0 pounds = 0.000 kilos</p>
+        </div>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>

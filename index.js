@@ -2,6 +2,7 @@ const inputEl = document.querySelector("#input-el")
 const lengthEl = document.querySelector("#length-el")
 const volumeEl = document.querySelector("#volume-el")
 const massEl = document.querySelector("#mass-el")
+const temperatureEl = document.querySelector("#temperature-el")
 
 const convert = (valNum) =>
 {
@@ -20,7 +21,12 @@ const convert = (valNum) =>
     // Convert mass
     pounds = valNum * 2.205
     kilos = valNum / 2.205
-    massEl.innerText = `${valNum} kilos = ${feet.toFixed(3)} pounds | ${valNum} pounds = ${kilos.toFixed(3)} kilos`
+    massEl.innerText = `${valNum} kilos = ${pounds.toFixed(3)} pounds | ${valNum} pounds = ${kilos.toFixed(3)} kilos`
+
+    // Convert temperature
+    fahrenheit = (valNum * (9 / 5)) + 32
+    celcius = (valNum - 32) * 5 / 9
+    temperatureEl.innerText = `${valNum}°C = ${fahrenheit.toFixed(0)}°F | ${valNum}°F = ${celcius.toFixed(0)}°C`
 }
 
 document.querySelector("#formUnitConvert").addEventListener("submit", (e) => 

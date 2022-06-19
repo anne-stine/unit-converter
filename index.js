@@ -21,12 +21,11 @@ const convert = (valNum) =>
     pounds = valNum * 2.205
     kilos = valNum / 2.205
     massEl.innerText = `${valNum} kilos = ${feet.toFixed(3)} pounds | ${valNum} pounds = ${kilos.toFixed(3)} kilos`
-
-    inputEl.blur()
 }
 
 document.querySelector("#formUnitConvert").addEventListener("submit", (e) => 
 {
     e.preventDefault()
     convert(inputEl.value)
+    inputEl.blur()
 })

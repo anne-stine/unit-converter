@@ -5,7 +5,7 @@ const massEl = document.querySelector("#mass-el")
 
 const convert = (valNum) =>
 {
-    if (!valNum){valNum = 0}
+    if (!valNum) valNum = 0
 
     // Convert length
     feet = valNum * 3.281

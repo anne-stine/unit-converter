@@ -30,12 +30,3 @@ document.querySelector("#formUnitConvert").addEventListener("submit", (e) =>
     e.preventDefault()
     convert(inputEl.value)
 })
-
-document.addEventListener("keydown", (e) => 
-{
-    if (e.key === "Enter")
-    {
-        e.preventDefault()
-        convert(inputEl.value)
-    }
-})

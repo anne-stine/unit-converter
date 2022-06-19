@@ -1,5 +1,4 @@
 const inputEl = document.querySelector("#input-el")
-const convertBtn = document.querySelector("#convert-btn")
 const lengthEl = document.querySelector("#length-el")
 const volumeEl = document.querySelector("#volume-el")
 const massEl = document.querySelector("#mass-el")
@@ -22,7 +21,21 @@ const convert = (valNum) =>
     pounds = valNum * 2.205
     kilos = valNum / 2.205
     massEl.innerText = `${valNum} kilos = ${feet.toFixed(3)} pounds | ${valNum} pounds = ${kilos.toFixed(3)} kilos`
+
+    inputEl.value = ""
 }
 
-convertBtn.addEventListener("click", () => convert(inputEl.value))
-document.addEventListener("keydown", (e) => {if (e.key === "Enter"){convert(inputEl.value)}})
+document.querySelector("#formUnitConvert").addEventListener("submit", (e) => 
+{
+    e.preventDefault()
+    convert(inputEl.value)
+})
+
+document.addEventListener("keydown", (e) => 
+{
+    if (e.key === "Enter")
+    {
+        e.preventDefault()
+        convert(inputEl.value)
+    }
+})
